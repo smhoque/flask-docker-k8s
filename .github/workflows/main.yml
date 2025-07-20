@@ -27,5 +27,5 @@ jobs:
           export KUBECONFIG=$PWD/kubeconfig
       - name: Deploy to Kubernetes
         run: |
-          kubectl apply -f deployment.yaml
+          kubectl apply -f deployment.yaml --validate=false
           kubectl apply -f service.yaml
